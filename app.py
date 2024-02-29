@@ -18,7 +18,7 @@ real_data = pd.read_csv("data/data_runup.csv")
 
 html_template = """
 <div style="border:3px solid #0069cb;padding:10px">
-<h2 style="color:white;text-align:center;">Prediksi Runup Gelombang dengan XGBoost 🌊🌊🌊</h2>
+<h2 style="color:white;text-align:center;font-size:14px">Prediksi Runup Gelombang dengan XGBoost 🌊🌊🌊</h2>
 </div>
 """
 
@@ -117,4 +117,4 @@ if predict_trigger:
             container.write("Nilai hasil prediksi: {:.3f} m".format(predicted_result))
             container.write("Selisih: {:.3f} m".format(difference))
         else:
-            st.success("Nilai hasil prediksi: {:.3f} m".format(predicted_result))
+            st.success("Prediksi nilai ketinggian runup gelombang: {:.3f} m".format(predicted_result))
