@@ -18,7 +18,7 @@ real_data = pd.read_csv("data/data_runup.csv")
 
 html_template = """
 <div style="border:3px solid #0069cb;padding:10px">
-<h2 style="color:white;text-align:center;font-size:14px">Prediksi Runup Gelombang dengan XGBoost 🌊🌊🌊</h2>
+<h2 style="color:white;text-align:center;font-size:1.5em">Prediksi Runup Gelombang dengan XGBoost 🌊🌊🌊</h2>
 </div>
 """
 
