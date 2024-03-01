@@ -96,13 +96,6 @@ def predict_wave_runup(slope, layer, significant_wave_height, peak_period):
 
 
 predict_trigger = st.button("Lakukan prediksi!")
-reset_trigger = st.button("Reset")
-
-if reset_trigger:
-    slope = 1.5
-    layer = 1
-    significant_wave_height = None
-    peak_period = None
 
 if predict_trigger:
     predicted_result, real_result = predict_wave_runup(
@@ -113,8 +106,8 @@ if predict_trigger:
         if real_result is not None:
             difference = abs(predicted_result - real_result)
             container = st.container(border=True)
-            container.write("Nilai sesungguhnya: {:.3f} m".format(real_result))
-            container.write("Nilai hasil prediksi: {:.3f} m".format(predicted_result))
+            container.write("Nilai ketinggian runup sesungguhnya: {:.3f} m".format(real_result))
+            container.write("Nilai ketinggian runup hasil prediksi: {:.3f} m".format(predicted_result))
             container.write("Selisih: {:.3f} m".format(difference))
         else:
             st.success("Prediksi nilai ketinggian runup gelombang: {:.3f} m".format(predicted_result))
